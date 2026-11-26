@@ -45,7 +45,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     nav .container { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; flex-wrap: wrap; gap: 10px; }
-    
+
     /* Logo Area */
     .logo-area { display: flex; align-items: center; gap: 15px; }
     .logo-img { height: 45px; width: auto; }
@@ -64,7 +64,7 @@
     }
     .nav-cta:hover { background: #c00510; }
 
-    /* Hero */
+    /* Hero (the large top banner image) */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url('https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -103,7 +103,7 @@
       overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.2s;
     }
     .card:hover { transform: translateY(-5px); }
-    .card-img { width: 100%; height: 200px; object-fit: cover; }
+    .card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
     .card-content { padding: 20px; }
     .card h3 { color: var(--sq-red); margin-bottom: 10px; font-size: 1.3rem; }
     .card p { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
@@ -214,7 +214,7 @@
         </div>
         <div class="branch-name">Matsapha</div>
       </div>
-      
+
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#brands">Brands</a>
@@ -225,7 +225,7 @@
     </div>
   </nav>
 
-  <!-- Hero banner -->
+  <!-- Hero banner (the large top banner image) -->
   <section class="hero">
     <div class="container">
       <h1>More than <span>tyre experts.</span></h1>
@@ -251,16 +251,16 @@
   </div>
 
   <!-- Services -->
-    <!-- Services -->
   <section class="services" id="services">
     <div class="container">
       <h2 class="section-title">What we do</h2>
       <p class="section-sub">We fit the parts we trust. Every job is done by technicians who work on these vehicles every day.</p>
       <div class="grid">
-        
+
         <div class="card">
-          <!-- Image: Tyre change -->
-          <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=600&q=80" alt="Tyre fitment" class="card-img">
+          <!-- Local file: service-tyres.jpg (fallback: tyre stack) -->
+          <img src="service-tyres.jpg" alt="Tyre fitment" class="card-img" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=600&q=80';">
           <div class="card-content">
             <h3>Tyres</h3>
             <p>Passenger, SUV, 4x4 and commercial tyres from Bridgestone, Firestone and Dayton. We’ll help you choose the right set for how you actually drive.</p>
@@ -269,18 +269,20 @@
         </div>
 
         <div class="card">
-          <!-- Image: Pouring motor oil -->
-          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80" alt="Oil Change" class="card-img">
+          <!-- Local file: service-oil.jpg (fallback: clean oil pour) -->
+          <img src="service-oil.jpg" alt="Oil change" class="card-img" loading="lazy"
+               onerror="this.onerror=null; this.src='https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/619c63da435d.png';">
           <div class="card-content">
-            <h3>Oil Changes & Servicing</h3>
+            <h3>Oil Changes &amp; Servicing</h3>
             <p>Keep your engine running smoothly. We do fast, clean oil changes and basic servicing using quality oils and filters.</p>
             <a href="https://wa.me/26878088438?text=Hi%2C%20I%20need%20an%20oil%20change%20or%20service." target="_blank">Book a service →</a>
           </div>
         </div>
 
         <div class="card">
-          <!-- Image: Mechanic working on wheel hub -->
-          <img src="https://images.unsplash.com/photo-1613214150384-184467c7c5d0?auto=format&fit=crop&w=600&q=80" alt="Wheel Alignment" class="card-img">
+          <!-- Local file: service-alignment.jpg (fallback: clean alignment clamp) -->
+          <img src="service-alignment.jpg" alt="Wheel alignment" class="card-img" loading="lazy"
+               onerror="this.onerror=null; this.src='https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ae014b5e366e.jpg';">
           <div class="card-content">
             <h3>Wheel Alignment</h3>
             <p>Computerised 4-wheel alignment. We check camber, caster and toe, then road-test to confirm. You leave with a straight steering wheel.</p>
@@ -289,8 +291,9 @@
         </div>
 
         <div class="card">
-          <!-- Image: Brake disc close up -->
-          <img src="https://images.unsplash.com/photo-1600661653561-629509216228?auto=format&fit=crop&w=600&q=80" alt="Brakes" class="card-img">
+          <!-- Local file: service-brakes.jpg (fallback: brake disc close-up) -->
+          <img src="service-brakes.jpg" alt="Brakes" class="card-img" loading="lazy"
+               onerror="this.onerror=null; this.src='https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b62491713da1.jpeg';">
           <div class="card-content">
             <h3>Brakes</h3>
             <p>Ferodo and other trusted brake brands. Pads, discs and fluid — we tell you what needs doing now and what can wait.</p>
@@ -299,8 +302,9 @@
         </div>
 
         <div class="card">
-          <!-- Image: Car battery -->
-          <img src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&w=600&q=80" alt="Batteries" class="card-img">
+          <!-- Local file: service-battery.jpg (fallback: battery terminal) -->
+          <img src="service-battery.jpg" alt="Car battery" class="card-img" loading="lazy"
+               onerror="this.onerror=null; this.src='https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e772c4cfba95.jpg';">
           <div class="card-content">
             <h3>Batteries</h3>
             <p>Willard and Sabat batteries, tested and fitted while you wait. If your car is slow to start, come in for a free battery test.</p>
@@ -309,10 +313,11 @@
         </div>
 
         <div class="card">
-          <!-- Image: Exhaust pipe / undercarriage -->
-          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80" alt="Exhausts & Suspension" class="card-img">
+          <!-- Local file: service-shocks.jpg (fallback: strut installation) -->
+          <img src="service-shocks.jpg" alt="Shock absorber installation" class="card-img" loading="lazy"
+               onerror="this.onerror=null; this.src='https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/84796f0e03ca.jpg';">
           <div class="card-content">
-            <h3>Shocks & Exhausts</h3>
+            <h3>Shocks &amp; Exhausts</h3>
             <p>Monroe, Gabriel and Armstrong shocks, plus Bosal exhaust systems. We’ll get your car riding smooth and sounding quiet again.</p>
             <a href="https://wa.me/26878088438?text=Hi%2C%20I%20need%20suspension%20or%20exhaust%20work." target="_blank">Ask about repairs →</a>
           </div>
@@ -329,7 +334,7 @@
         <h2>BLACK <span>FRIDAY</span> DEALS</h2>
         <h4>Offer valid till 30 November 2026</h4>
         <p>Or while stocks last. Grab these fantastic tyre deals at Supa Quick Matsapha.</p>
-        
+
         <div class="promo-grid">
           <div class="tyre-deal">
             <h3>16" from E1,339</h3>
@@ -402,7 +407,7 @@
           Mahhala near Eswatini Brewery<br>
           Next to SnB Restaurant<br>
           Matsapha, Eswatini</p>
-          
+
           <h3 style="margin-top:25px;">Contact</h3>
           <p>
             <a href="tel:+26878088438">+268 7808 8438</a><br />
@@ -486,7 +491,6 @@
         + '*Service:* ' + encodeURIComponent(service) + '%0A'
         + '*Preferred date:* ' + encodeURIComponent(date);
 
-      // REAL WHATSAPP NUMBER IS NOW IN USE BASED ON YOUR ATTACHED IMAGE
       window.open('https://wa.me/26878088438?text=' + message, '_blank');
     });
   </script>
